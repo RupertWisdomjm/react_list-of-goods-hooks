@@ -29,7 +29,7 @@ export const App: React.FC = () => {
   const handleSortAlphabetically = () => {
     setSortType('alphabetically');
     setIsReverse(false);
-    setGoods([...goodsFromServer].sort());
+    setGoods([...goods].sort());
   };
 
   const handleSortByLength = () => {
@@ -40,7 +40,7 @@ export const App: React.FC = () => {
 
   const handleReverse = () => {
     setGoods(prevGoods => prevGoods.reverse());
-    setIsReverse(!false);
+    setIsReverse(prevIsReverse => !prevIsReverse);
   };
 
   const handleReset = () => {
